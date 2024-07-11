@@ -5,8 +5,8 @@ forked from https://github.com/refactorian/laravel-docker
 # Laravel Docker Starter Kit
 - Laravel v11.x
 - PHP v8.3.x
-- MySQL v8.1.x (default)
-- MariaDB v10.11.x
+- MySQL v8.1.x
+- MariaDB v10.11.x (default)
 - PostgreSQL v16.x
 - pgAdmin v4.x
 - phpMyAdmin v5.x
