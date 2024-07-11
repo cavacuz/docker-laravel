@@ -27,20 +27,20 @@ services:
     ####################################################################################################
     # DATABASE (MySQL)
     ####################################################################################################
-    db:
-        image: mysql:8.1
-        ports:
-            - 3306:3306
-        volumes:
-            - .docker/db/data:/var/lib/mysql
-            - .docker/logs:/var/log/mysql
-            - .docker/db/my.cnf:/etc/mysql/conf.d/my.cnf
-            - .docker/db/sql:/docker-entrypoint-initdb.d
-        environment:
-            MYSQL_ROOT_PASSWORD: root
-            MYSQL_DATABASE: refactorian
-            MYSQL_USER: refactorian
-            MYSQL_PASSWORD: refactorian
+    # db:
+    #    image: mysql:8.1
+    #    ports:
+    #        - 3306:3306
+    #    volumes:
+    #        - .docker/db/data:/var/lib/mysql
+    #        - .docker/logs:/var/log/mysql
+    #        - .docker/db/my.cnf:/etc/mysql/conf.d/my.cnf
+    #        - .docker/db/sql:/docker-entrypoint-initdb.d
+    #    environment:
+    #        MYSQL_ROOT_PASSWORD: root
+    #        MYSQL_DATABASE: refactorian
+    #        MYSQL_USER: refactorian
+    #        MYSQL_PASSWORD: refactorian
 
     ####################################################################################################
     # phpMyAdmin
@@ -91,20 +91,20 @@ services:
     # ####################################################################################################
     # # DATABASE (MariaDB)
     # ####################################################################################################
-    # db:
-    #     image: mariadb:10.11
-    #     ports:
-    #         - 3306:3306
-    #     volumes:
-    #         - .docker/db/data:/var/lib/mysql
-    #         - .docker/logs:/var/log/mysql
-    #         - .docker/db/my.cnf:/etc/mysql/conf.d/my.cnf
-    #         - .docker/db/sql:/docker-entrypoint-initdb.d
-    #     environment:
-    #         MYSQL_ROOT_PASSWORD: root
-    #         MYSQL_DATABASE: laravel_db_name
-    #         MYSQL_USER: laravel_db_user
-    #         MYSQL_PASSWORD: laravel_db_pass
+    db:
+         image: mariadb:10.11
+         ports:
+             - 3306:3306
+         volumes:
+             - .docker/db/data:/var/lib/mysql
+             - .docker/logs:/var/log/mysql
+             - .docker/db/my.cnf:/etc/mysql/conf.d/my.cnf
+             - .docker/db/sql:/docker-entrypoint-initdb.d
+         environment:
+             MYSQL_ROOT_PASSWORD: root
+             MYSQL_DATABASE: refactorian
+             MYSQL_USER: refactorian
+             MYSQL_PASSWORD: refactorian
 
     ####################################################################################################
     # PostgreSQL
